@@ -13,6 +13,7 @@ import {
 import Image from "next/image";
 import { wrap } from "@motionone/utils";
 import Footer from "@/components/footer";
+import { FaStar } from 'react-icons/fa';
 
 function ParallaxImageRow({
   images,
@@ -228,6 +229,112 @@ export default function Home() {
           </div>
         </section>
       </div>
+
+      {/* Customer testimonials  */}
+      <section className="w-full bg-[#0F1010]">
+        <div className="container px-6 py-10 mx-auto">
+            <div className="pt-[70px] text-center">
+            <h1 className="text-white text-5xl font-medium">Customer testimonials</h1>
+            <p className="mt-3 text-white font-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+            <section className="grid grid-cols-1 gap-8 mt-8 xl:mt-16 lg:grid-cols-2 xl:grid-cols-3">
+              {/* Testimonial Card 1 */}
+              <div className="p-8 border rounded-lg ">
+                <div className="flex mb-4">
+                  {/* Menampilkan 5 ikon bintang */}
+                  {[...Array(5)].map((_, index) => (
+                    <FaStar key={index} className="text-yellow-500 text-xl" />
+                  ))}
+                </div>
+            
+                <p className="text-white leading-loose">
+                  “A customer testimonial that highlights features and answers potential customer doubts about your product or service. Showcase testimonials from a similar demographic to your customers.”
+                </p>
+
+                <div className="flex items-center mt-8 -mx-2">
+                  <div className="relative mx-2 w-14 h-14 rounded-full ring-4 ring-gray-300 dark:ring-gray-700 overflow-hidden shrink-0">
+                    <Image
+                      src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                      alt="Robert"
+                      layout="fill"
+                      objectFit="cover" // Menyesuaikan agar gambar pas dengan container
+                    />
+                  </div>
+
+                  <div className="mx-2">
+                    <h1 className="font-semibold text-white">Customer Name</h1>
+                    <span className="text-sm text-white">Position, Company Name</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial Card 2 */}
+              <div className="p-8 border rounded-lg">
+                  <div className="flex mb-4">
+                  {/* Menampilkan 5 ikon bintang */}
+                  {[...Array(5)].map((_, index) => (
+                    <FaStar key={index} className="text-yellow-500 text-xl" />
+                  ))}
+                </div>                    
+                <p className="leading-loose text-white ">
+                  “A customer testimonial that highlights features and answers potential customer doubts about your product or service. Showcase testimonials from a similar demographic to your customers.”
+                </p>
+
+                <div className="flex items-center mt-8 -mx-2">
+                  <div className="relative mx-2 w-14 h-14 rounded-full ring-4 ring-gray-300 dark:ring-gray-700 overflow-hidden shrink-0">
+                    <Image
+                      src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+                      alt="Jeny Doe"
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  </div>
+                  <div className="mx-2">
+                    <h1 className="font-semibold text-white">Customer Name</h1>
+                    <span className="text-sm text-white">Position, Company Name</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial Card 3 */}
+              <div className="p-8 border rounded-l">
+                <div className="flex mb-4">
+                  {/* Menampilkan 5 ikon bintang */}
+                  {[...Array(5)].map((_, index) => (
+                    <FaStar key={index} className="text-yellow-500 text-xl" />
+                  ))}
+                </div> 
+                <p className="leading-loose text-white ">
+                  “A customer testimonial that highlights features and answers potential customer doubts about your product or service. Showcase testimonials from a similar demographic to your customers.”
+                </p>
+
+                <div className="flex items-center mt-8 -mx-2">
+                  <div className="relative mx-2 w-14 h-14 rounded-full ring-4 ring-gray-300 dark:ring-gray-700 overflow-hidden shrink-0">
+                    <Image
+                      src="https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                      alt="Ema Watson"
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  </div>
+                  <div className="mx-2">
+                    <h1 className="font-semibold text-white">Customer Name</h1>
+                    <span className="text-sm text-white">Position, Company Name</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+        </div>
+        <div>
+          <div className="pt-10">
+            <h2 className="text-white text-center text-2xl">Our Client</h2>
+          </div>
+          <div className="pt-14">
+            {/* 5 logo */}
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <Footer />
     </>
