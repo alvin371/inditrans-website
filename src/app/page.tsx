@@ -14,6 +14,8 @@ import Image from "next/image";
 import { wrap } from "@motionone/utils";
 import Footer from "@/components/footer";
 import { FaStar } from 'react-icons/fa';
+import Link from "next/link";
+import { WhatsappIcon } from "../components/icon";
 
 function ParallaxImageRow({
   images,
@@ -241,7 +243,6 @@ export default function Home() {
               {/* Testimonial Card 1 */}
               <div className="p-8 border rounded-lg ">
                 <div className="flex mb-4">
-                  {/* Menampilkan 5 ikon bintang */}
                   {[...Array(5)].map((_, index) => (
                     <FaStar key={index} className="text-yellow-500 text-xl" />
                   ))}
@@ -271,7 +272,6 @@ export default function Home() {
               {/* Testimonial Card 2 */}
               <div className="p-8 border rounded-lg">
                   <div className="flex mb-4">
-                  {/* Menampilkan 5 ikon bintang */}
                   {[...Array(5)].map((_, index) => (
                     <FaStar key={index} className="text-yellow-500 text-xl" />
                   ))}
@@ -299,7 +299,6 @@ export default function Home() {
               {/* Testimonial Card 3 */}
               <div className="p-8 border rounded-l">
                 <div className="flex mb-4">
-                  {/* Menampilkan 5 ikon bintang */}
                   {[...Array(5)].map((_, index) => (
                     <FaStar key={index} className="text-yellow-500 text-xl" />
                   ))}
@@ -329,8 +328,67 @@ export default function Home() {
           <div className="pt-10">
             <h2 className="text-white text-center text-2xl">Our Client</h2>
           </div>
-          <div className="pt-14">
+          <div className="py-14 container px-6 mx-auto">
             {/* 5 logo */}
+            <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 place-items-center gap-4">
+              <Image
+                className="md:col-span-2 lg:col-span-1"
+                width={254}
+                height={120}
+                src="/softex-logo.png"
+                alt="softex logo"
+                />
+              <Image
+                className="md:col-span-2 lg:col-span-1"
+                width={254}
+                height={120}
+                src="/softex-logo.png"
+                alt="softex logo"
+                />
+              <Image
+                className="md:col-span-2 lg:col-span-1"
+                width={254}
+                height={120}
+                src="/softex-logo.png"
+                alt="softex logo"
+              />
+              <Image
+                className="md:col-span-3 lg:col-span-1"
+                width={254}
+                height={120}
+                src="/softex-logo.png"
+                alt="softex logo"
+              />
+              <Image
+                className="md:col-span-3 lg:col-span-1"
+                width={254}
+                height={120}
+                src="/softex-logo.png"
+                alt="softex logo"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* background image */}
+        <div
+          className="w-full h-[600px] content-center"
+          style={{ backgroundImage: "url('https://storge.pic2.me/cm/1440x900/678/58652b4b10ff5.jpg')" }}
+        >
+          <div className="text-center pt-10 ">
+            <h1 className="font-bold text-white text-3xl sm:text-4xl lg:text-6xl">Siap Kirim Paket dengan</h1>
+            <h1 className="font-bold text-white text-3xl sm:text-4xl lg:text-6xl mt-6">Layanan Baru Kami?</h1>
+            <p className="text-white text-sm sm:text-2xl mt-6">Jangkau seluruh Indonesia dengan tarif</p>
+            <p className="text-white text-sm sm:text-2xl mt-2">hemat dan pengiriman prioritas</p>
+            <div className="flex justify-center ">
+              <Link
+                href="#"
+                className="flex flex-row px-5 py-2 mt-4 text-sm text-center text-white capitalize bg-[#EDAF05] rounded-full hover:bg-[#edb705d7] lg:w-40"
+                >
+                <WhatsappIcon className="w-5 h-5 mr-2" />
+                Hubungi Kami
+              </Link>
+            </div>
           </div>
         </div>
       </section>
