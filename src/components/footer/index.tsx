@@ -15,7 +15,7 @@ const Footer = () => {
         {/* Logo and Company Name */}
         <div className="flex flex-col align-middle items-center lg:items-start justify-center text-center">
           <Image
-            src="/inditrans-logo.png" // Update the path to your logo image
+            src="/images/inditrans-logo.png" // Update the path to your logo image
             alt="Company Logo"
             width={20}
             height={20}

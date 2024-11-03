@@ -81,7 +81,7 @@ export default function Home() {
       <Navbar />
       {/* Section Content */}
       <div className="container py-10 mx-auto text-center">
-        <div className="flex flex-col mx-auto w-[660px]">
+        <div className="flex flex-col mx-auto lg:w-[660px] w-full space-y-4">
           <Image
             width={100}
             height={100}
@@ -89,11 +89,11 @@ export default function Home() {
             alt="Logo"
             className="justify-center mx-auto"
           />
-          <h1 className="inline-block text-[#002C4A] text-[3rem] font-bold w-full text-center">
+          <h1 className="inline-block text-[#002C4A] text-3xl lg:text-[3rem] font-bold w-full text-center">
             PT. Inditrans Satu Nusantara
           </h1>
 
-          <h1 className="text-center text-[2rem] font-semibold">
+          <h1 className="text-center text-xl lg:text-[2rem] font-semibold">
             Packing & Moving
           </h1>
         </div>

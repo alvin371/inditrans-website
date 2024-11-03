@@ -17,14 +17,14 @@ const Navbar: React.FC = () => {
               <Image
                 width={1920}
                 height={1080}
-                className="w-auto h-6 sm:h-14"
+                className="w-auto h-12 sm:h-14"
                 src="/inditrans-logo.png"
                 alt="Logo"
               />
               <Image
                 width={1920}
                 height={1080}
-                className="w-auto hidden lg:block sm:h-14"
+                className="w-auto h-12 sm:h-14"
                 src="/inditrans-title-logo.png"
                 alt="Logo"
               />
@@ -110,45 +110,46 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white shadow-md dark:bg-gray-900 lg:bg-transparent lg:shadow-none lg:relative lg:flex lg:items-center lg:justify-center lg:space-x-8 lg:w-auto lg:opacity-100 lg:translate-x-0 ${
+          className={`absolute inset-x-0 z-20 w-full px-6 py-4 mt-2 transition-all duration-300 ease-in-out bg-[#002C4A] text-white shadow-md dark:bg-gray-900 lg:bg-transparent lg:shadow-none lg:relative lg:flex lg:items-center lg:justify-center lg:space-x-8 lg:w-auto lg:opacity-100 lg:translate-x-0 ${
             isOpen ? "translate-x-0 opacity-100" : "opacity-0 -translate-x-full"
           }`}
         >
           <div className="flex flex-col space-y-4 lg:flex-row lg:space-y-0 lg:space-x-8 lg:hidden">
             <Link
               href="#"
-              className="text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
+              className="dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
             >
               Home
             </Link>
             <Link
               href="#"
-              className="text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
+              className="dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
             >
               About Us
             </Link>
             <Link
               href="#"
-              className="text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
+              className="dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
             >
               Our Office
             </Link>
             <Link
               href="#"
-              className="text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
+              className="dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
             >
               Tracking
             </Link>
             <Link
               href="#"
-              className="text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
+              className="dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
             >
               Layanan
             </Link>
+            <DropdownLanguage />
           </div>
 
           {/* Get Started Button - aligned to the right */}
-          <div className="flex flex-row space-x-4">
+          <div className="lg:flex flex-row space-x-4 hidden">
             <DropdownLanguage />
             <Link
               href="#"
