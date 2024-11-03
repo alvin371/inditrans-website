@@ -18,14 +18,14 @@ const Navbar: React.FC = () => {
                 width={1920}
                 height={1080}
                 className="w-auto h-12 sm:h-14"
-                src="/inditrans-logo.png"
+                src="/images/inditrans-logo.png"
                 alt="Logo"
               />
               <Image
                 width={1920}
                 height={1080}
                 className="w-auto h-12 sm:h-14"
-                src="/inditrans-title-logo.png"
+                src="/images/inditrans-title-logo.png"
                 alt="Logo"
               />
             </div>
