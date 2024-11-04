@@ -9,17 +9,21 @@ const Footer = () => {
     <footer className="bg-white py-10 border-t border-gray-200">
       <div className="container mx-auto px-4 flex flex-col items-center md:items-start md:flex-row lg:justify-between">
         {/* Logo and Company Name */}
-        <div className="flex flex-col align-middle items-center lg:items-start justify-center text-center">
-          <Image
-            src="/images/inditrans-logo.png" // Update the path to your logo image
-            alt="Company Logo"
-            width={20}
-            height={20}
-          />
-          <h1 className="text-xl font-bold mt-2">
+        <div className="flex flex-col align-middle items-center lg:items-start justify-center text-center cursor-pointer">
+          <div className="mx-auto">
+            <Image
+              src="/images/inditrans-logo.png"
+              alt="Company Logo"
+              width={20}
+              height={20}
+            />
+          </div>
+          <h1 className="text-xl text-center font-bold mt-2">
             PT. Inditrans Satu Nusantara
           </h1>
-          <p className="text-gray-500">PACKING & DELIVERY</p>
+          <p className="text-gray-500 text-center mx-auto">
+            PACKING & DELIVERY
+          </p>
         </div>
 
         {/* Office Locations */}
