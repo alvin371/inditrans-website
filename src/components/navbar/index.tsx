@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className="bg-white dark:bg-gray-900">
+    <section className="bg-white dark:bg-gray-900 sticky top-0 z-50">
       <nav className="container p-6 mx-auto lg:flex lg:justify-between lg:items-center">
         <div className="flex items-center justify-between">
           <Link href="#">
@@ -78,33 +78,38 @@ const Navbar: React.FC = () => {
         <div className="hidden lg:flex lg:items-center lg:justify-center lg:space-x-8">
           <Link
             href="#"
-            className="text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
+            className="text-gray-700 dark:text-gray-200 hover:text-[#002C4A] hover:font-semibold dark:hover:text-blue-400 transition-colors duration-300 group relative w-max"
           >
             Home
+            <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-[#002C4A] group-hover:w-full"></span>
           </Link>
           <Link
             href="#"
-            className="text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
+            className="text-gray-700 dark:text-gray-200 hover:text-[#002C4A] hover:font-semibold dark:hover:text-blue-400 transition-colors duration-300 group relative w-max"
           >
             About Us
+            <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-[#002C4A] group-hover:w-full"></span>
           </Link>
           <Link
             href="#"
-            className="text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
+            className="text-gray-700 dark:text-gray-200 hover:text-[#002C4A] hover:font-semibold dark:hover:text-blue-400 transition-colors duration-300 group relative w-max"
           >
             Our Office
+            <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-[#002C4A] group-hover:w-full"></span>
           </Link>
           <Link
             href="#"
-            className="text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
+            className="text-gray-700 dark:text-gray-200 hover:text-[#002C4A] hover:font-semibold dark:hover:text-blue-400 transition-colors duration-300 group relative w-max"
           >
             Tracking
+            <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-[#002C4A] group-hover:w-full"></span>
           </Link>
           <Link
             href="#"
-            className="text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
+            className="text-gray-700 dark:text-gray-200 hover:text-[#002C4A] hover:font-semibold dark:hover:text-blue-400 transition-colors duration-300 group relative w-max"
           >
             Layanan
+            <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-[#002C4A] group-hover:w-full"></span>
           </Link>
         </div>
 
@@ -117,31 +122,31 @@ const Navbar: React.FC = () => {
           <div className="flex flex-col space-y-4 lg:flex-row lg:space-y-0 lg:space-x-8 lg:hidden">
             <Link
               href="#"
-              className="dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
+              className="dark:text-gray-200 hover:text-[#FDCD26] dark:hover:text-blue-400 transition-colors duration-300"
             >
               Home
             </Link>
             <Link
               href="#"
-              className="dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
+              className="dark:text-gray-200 hover:text-[#FDCD26] dark:hover:text-blue-400 transition-colors duration-300"
             >
               About Us
             </Link>
             <Link
               href="#"
-              className="dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
+              className="dark:text-gray-200 hover:text-[#FDCD26] dark:hover:text-blue-400 transition-colors duration-300"
             >
               Our Office
             </Link>
             <Link
               href="#"
-              className="dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
+              className="dark:text-gray-200 hover:text-[#FDCD26] dark:hover:text-blue-400 transition-colors duration-300"
             >
               Tracking
             </Link>
             <Link
               href="#"
-              className="dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
+              className="dark:text-gray-200 hover:text-[#FDCD26] dark:hover:text-blue-400 transition-colors duration-300"
             >
               Layanan
             </Link>
