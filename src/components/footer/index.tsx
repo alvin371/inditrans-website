@@ -31,25 +31,39 @@ const Footer = () => {
           <h2 className="text-xl font-semibold mb-4">INDITRANS OFFICE</h2>
           <ul className="mt-2 text-sm">
             <Link href="#">
-              <li className="mb-2">Bali Office</li>
+              <li className="mb-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-current hover:after:w-3/4 after:transition-all after:duration-300">
+                Bali Office
+              </li>
             </Link>
             <Link href="#">
-              <li className="mb-2">Bekasi Office</li>
+              <li className="mb-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-current hover:after:w-3/4 after:transition-all after:duration-300">
+                Bekasi Office
+              </li>
             </Link>
             <Link href="#">
-              <li className="mb-2">Palembang Office</li>
+              <li className="mb-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-current hover:after:w-3/4 after:transition-all after:duration-300">
+                Palembang Office
+              </li>
             </Link>
             <Link href="#">
-              <li className="mb-2">Kupang Office</li>
+              <li className="mb-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-current hover:after:w-3/4 after:transition-all after:duration-300">
+                Kupang Office
+              </li>
             </Link>
             <Link href="#">
-              <li className="mb-2">Warehouse Kupang</li>
+              <li className="mb-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-current hover:after:w-3/4 after:transition-all after:duration-300">
+                Warehouse Kupang
+              </li>
             </Link>
             <Link href="#">
-              <li className="mb-2">Surabaya Office</li>
+              <li className="mb-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-current hover:after:w-3/4 after:transition-all after:duration-300">
+                Surabaya Office
+              </li>
             </Link>
             <Link href="#">
-              <li className="mb-2">Lombok</li>
+              <li className="mb-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-current hover:after:w-3/4 after:transition-all after:duration-300">
+                Lombok
+              </li>
             </Link>
           </ul>
         </div>

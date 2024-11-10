@@ -3,10 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { WhatsappIcon } from "../icon";
+import { useTranslation } from "react-i18next";
 import DropdownLanguage from "../dropdown/language";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <section className="bg-white dark:bg-gray-900 sticky top-0 z-50">
@@ -76,40 +78,20 @@ const Navbar: React.FC = () => {
 
         {/* Navbar Links for Desktop */}
         <div className="hidden lg:flex lg:items-center lg:justify-center lg:space-x-8">
-          <Link
-            href="#"
-            className="text-gray-700 dark:text-gray-200 hover:text-[#002C4A] hover:font-semibold dark:hover:text-blue-400 transition-colors duration-300 group relative w-max"
-          >
-            Home
-            <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-[#002C4A] group-hover:w-full"></span>
+          <Link href="#" className="text-gray-700 dark:text-gray-200">
+            {t("navbar.home")}
           </Link>
-          <Link
-            href="#"
-            className="text-gray-700 dark:text-gray-200 hover:text-[#002C4A] hover:font-semibold dark:hover:text-blue-400 transition-colors duration-300 group relative w-max"
-          >
-            About Us
-            <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-[#002C4A] group-hover:w-full"></span>
+          <Link href="#" className="text-gray-700 dark:text-gray-200">
+            {t("navbar.aboutUs")}
           </Link>
-          <Link
-            href="#"
-            className="text-gray-700 dark:text-gray-200 hover:text-[#002C4A] hover:font-semibold dark:hover:text-blue-400 transition-colors duration-300 group relative w-max"
-          >
-            Our Office
-            <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-[#002C4A] group-hover:w-full"></span>
+          <Link href="#" className="text-gray-700 dark:text-gray-200">
+            {t("navbar.ourOffice")}
           </Link>
-          <Link
-            href="#"
-            className="text-gray-700 dark:text-gray-200 hover:text-[#002C4A] hover:font-semibold dark:hover:text-blue-400 transition-colors duration-300 group relative w-max"
-          >
-            Tracking
-            <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-[#002C4A] group-hover:w-full"></span>
+          <Link href="#" className="text-gray-700 dark:text-gray-200">
+            {t("navbar.tracking")}
           </Link>
-          <Link
-            href="#"
-            className="text-gray-700 dark:text-gray-200 hover:text-[#002C4A] hover:font-semibold dark:hover:text-blue-400 transition-colors duration-300 group relative w-max"
-          >
-            Layanan
-            <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-[#002C4A] group-hover:w-full"></span>
+          <Link href="#" className="text-gray-700 dark:text-gray-200">
+            {t("navbar.services")}
           </Link>
         </div>
 
@@ -120,40 +102,25 @@ const Navbar: React.FC = () => {
           }`}
         >
           <div className="flex flex-col space-y-4 lg:flex-row lg:space-y-0 lg:space-x-8 lg:hidden">
-            <Link
-              href="#"
-              className="dark:text-gray-200 hover:text-[#FDCD26] dark:hover:text-blue-400 transition-colors duration-300"
-            >
-              Home
+            <Link href="#" className="dark:text-gray-200">
+              {t("navbar.home")}
             </Link>
-            <Link
-              href="#"
-              className="dark:text-gray-200 hover:text-[#FDCD26] dark:hover:text-blue-400 transition-colors duration-300"
-            >
-              About Us
+            <Link href="#" className="dark:text-gray-200">
+              {t("navbar.aboutUs")}
             </Link>
-            <Link
-              href="#"
-              className="dark:text-gray-200 hover:text-[#FDCD26] dark:hover:text-blue-400 transition-colors duration-300"
-            >
-              Our Office
+            <Link href="#" className="dark:text-gray-200">
+              {t("navbar.ourOffice")}
             </Link>
-            <Link
-              href="#"
-              className="dark:text-gray-200 hover:text-[#FDCD26] dark:hover:text-blue-400 transition-colors duration-300"
-            >
-              Tracking
+            <Link href="#" className="dark:text-gray-200">
+              {t("navbar.tracking")}
             </Link>
-            <Link
-              href="#"
-              className="dark:text-gray-200 hover:text-[#FDCD26] dark:hover:text-blue-400 transition-colors duration-300"
-            >
-              Layanan
+            <Link href="#" className="dark:text-gray-200">
+              {t("navbar.services")}
             </Link>
             <DropdownLanguage />
           </div>
 
-          {/* Get Started Button - aligned to the right */}
+          {/* Get Started Button */}
           <div className="lg:flex flex-row space-x-4 hidden">
             <DropdownLanguage />
             <Link
@@ -161,7 +128,7 @@ const Navbar: React.FC = () => {
               className="flex flex-row px-5 py-2 mt-4 text-sm text-center text-white capitalize bg-[#EDAF05] rounded-full hover:bg-[#edb705d7] lg:mt-0 lg:ml-auto lg:w-auto"
             >
               <WhatsappIcon className="w-5 h-5 mr-2" />
-              Hubungi Kami
+              {t("navbar.contactUs")}
             </Link>
           </div>
         </div>

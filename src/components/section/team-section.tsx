@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const TeamSection = () => {
   const images = [
@@ -28,16 +29,14 @@ const TeamSection = () => {
       alt: "Pekerja wanita sedang bekerja di komputer"
     }
   ];
+  const { t } = useTranslation();
   return (
     <div className="bg-[#F6FAF3] py-10">
       <div className="flex flex-col justify-center mt-10 py-20">
         <h1 className="text-center text-[2rem] font-semibold">
-          Tim Profesional untuk Kinerja Optimal
+          {t("title.team")}
         </h1>
-        <h1 className="text-center text-xl">
-          Bekerja dengan keahlian dan dedikasi tinggi untuk memberikan layanan
-          terbaik di setiap langkah
-        </h1>
+        <h1 className="text-center text-xl">{t("title.team-sub")}</h1>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-full w-10/12 mx-auto">
         {images.map((image, index) => (

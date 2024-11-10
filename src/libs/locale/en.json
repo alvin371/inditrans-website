@@ -1,0 +1,36 @@
+{
+  "navbar": {
+    "home": "Home",
+    "aboutUs": "About Us",
+    "ourOffice": "Our Office",
+    "tracking": "Tracking",
+    "services": "Services",
+    "contactUs": "Contact Us"
+  },
+  "dropdown": {
+    "language": "Language",
+    "indonesian": "Bahasa Indonesia",
+    "english": "English"
+  },
+  "title": {
+    "heroes": "Superior Packing Process & Guaranteed Security",
+    "heroes-sub": "More than just logistics, we provide reliable and efficient delivery with advanced technological solutions.",
+    "blog": "Top Facilities for Seamless Services",
+    "blog-sub": "Supporting your needs with well-equipped infrastructure and high-quality service",
+    "article": {
+      "title-1": "Advanced Technology",
+      "title-2": "Spacious Warehouse",
+      "title-3": "Excellent Service",
+      "sub-1": "PT Inditrans utilizes common logistics technologies such as supply chain management systems, warehouse automation, and real-time tracking. These technologies enhance operational efficiency and delivery accuracy.",
+      "sub-2": "PT Inditrans has a large warehouse with ample capacity for storing various types of goods. This facility is supported by a modern management system to ensure efficient stock management. Its strategic location accelerates distribution.",
+      "sub-3": "Our highly dedicated team ensures quality service. PT Inditrans offers Fast Delivery & Moving services with guaranteed fast and secure shipping. Supported by a modern fleet and real-time tracking, the moving process becomes more efficient. This service ensures maximum customer satisfaction."
+    },
+    "team": "Professional Team for Optimal Performance",
+    "team-sub": "Working with expertise and high dedication to deliver the best service at every step",
+    "testimonial": "Customer Testimonials",
+    "testimonial-sub": "We take pride in the trust given by our customers. Here are some testimonials they provided",
+    "client": "Our Clients",
+    "cta": "Ready to Ship Your Package with Our New Service?",
+    "cta-sub": "Reach all across Indonesia with economical rates and priority delivery"
+  }
+}
