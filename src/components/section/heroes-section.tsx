@@ -10,6 +10,7 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import { wrap } from "@motionone/utils";
+import { useTranslation } from "react-i18next";
 
 function ParallaxImageRow({
   images,
@@ -86,6 +87,7 @@ const HeroesSection = () => {
     "/images/heroes-section/image-16.jpg"
   ];
 
+  const { t } = useTranslation();
   return (
     <>
       {/* Section Content */}
@@ -124,12 +126,9 @@ const HeroesSection = () => {
       <div className="bg-[#D6E8CA]">
         <div className="flex flex-col justify-center mt-10 py-20">
           <h1 className="text-center text-[2rem] font-semibold">
-            Proses Packing Unggul & Keamanan Terjamin
+            {t("title.heroes")}
           </h1>
-          <h1 className="text-center text-xl">
-            Lebih dari sekadar logistik, kami menyediakan pengiriman yang andal
-            dan efisien dengan solusi teknologi canggih.
-          </h1>
+          <h1 className="text-center text-xl">{t("title.heroes-sub")}</h1>
         </div>
 
         {/* Move Left to Right */}

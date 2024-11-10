@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 type BlogPostType = {
   id: number;
@@ -37,15 +38,15 @@ const blogPosts: BlogPostType[] = [
 ];
 
 const BlogSection: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <div className="py-10 mx-auto text-center">
       {/* Title Section */}
       <h1 className="text-[2rem] font-semibold text-gray-800 dark:text-white">
-        Fasilitas Terbaik untuk Layanan Tanpa Hambatan
+        {t("title.blog")}
       </h1>
       <p className="text-xl text-gray-600 dark:text-gray-300 max-w-xl mx-auto">
-        Mendukung kebutuhan Anda dengan infrastruktur yang Mumpuni dan Pelayanan
-        berkualitas tinggi
+        {t("title.blog-sub")}
       </p>
 
       {/* Blog Posts */}
