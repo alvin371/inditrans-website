@@ -5,12 +5,14 @@ import { useState } from "react";
 import { WhatsappIcon } from "../icon";
 import { useTranslation } from "react-i18next";
 import DropdownLanguage from "../dropdown/language";
+
 const scrollToSection = (id: string) => {
   const section = document.getElementById(id);
   if (section) {
     section.scrollIntoView({ behavior: "smooth" });
   }
 };
+
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useTranslation();
@@ -83,36 +85,18 @@ const Navbar: React.FC = () => {
 
         {/* Navbar Links for Desktop */}
         <div className="hidden lg:flex lg:items-center lg:justify-center lg:space-x-8">
-          <button
-            onClick={() => scrollToSection("home")}
-            className="text-gray-700 dark:text-gray-200"
-          >
-            {t("navbar.home")}
-          </button>
-          <button
-            onClick={() => scrollToSection("aboutUs")}
-            className="text-gray-700 dark:text-gray-200"
-          >
-            {t("navbar.aboutUs")}
-          </button>
-          <button
-            onClick={() => scrollToSection("ourOffice")}
-            className="text-gray-700 dark:text-gray-200"
-          >
-            {t("navbar.ourOffice")}
-          </button>
-          <button
-            onClick={() => scrollToSection("tracking")}
-            className="text-gray-700 dark:text-gray-200"
-          >
-            {t("navbar.tracking")}
-          </button>
-          <button
-            onClick={() => scrollToSection("services")}
-            className="text-gray-700 dark:text-gray-200"
-          >
-            {t("navbar.services")}
-          </button>
+          {["home", "aboutUs", "ourOffice", "tracking", "services"].map(
+            (section) => (
+              <button
+                key={section}
+                onClick={() => scrollToSection(section)}
+                className="text-gray-700 dark:text-gray-200 group relative hover:font-semibold font-medium"
+              >
+                {t(`navbar.${section}`)}
+                <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-[#002C4A] group-hover:w-full"></span>
+              </button>
+            )
+          )}
         </div>
 
         {/* Mobile Menu */}
@@ -121,27 +105,26 @@ const Navbar: React.FC = () => {
             isOpen ? "translate-x-0 opacity-100" : "opacity-0 -translate-x-full"
           }`}
         >
-          <div className="flex flex-col space-y-4 lg:flex-row lg:space-y-0 lg:space-x-8 lg:hidden">
-            <Link href="#" className="dark:text-gray-200">
-              {t("navbar.home")}
-            </Link>
-            <Link href="#" className="dark:text-gray-200">
-              {t("navbar.aboutUs")}
-            </Link>
-            <Link href="#" className="dark:text-gray-200">
-              {t("navbar.ourOffice")}
-            </Link>
-            <Link href="#" className="dark:text-gray-200">
-              {t("navbar.tracking")}
-            </Link>
-            <Link href="#" className="dark:text-gray-200">
-              {t("navbar.services")}
-            </Link>
+          <div className="flex flex-col space-y-4 lg:hidden">
+            {["home", "aboutUs", "ourOffice", "tracking", "services"].map(
+              (section) => (
+                <button
+                  key={section}
+                  onClick={() => {
+                    scrollToSection(section);
+                    setIsOpen(false); // Close menu after clicking
+                  }}
+                  className="text-gray-200 hover:text-gray-400 hover:font-medium text-start"
+                >
+                  {t(`navbar.${section}`)}
+                </button>
+              )
+            )}
             <DropdownLanguage />
           </div>
 
           {/* Get Started Button */}
-          <div className="lg:flex flex-row space-x-4 hidden">
+          <div className="hidden lg:flex flex-row space-x-4">
             <DropdownLanguage />
             <Link
               href="#"
