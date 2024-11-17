@@ -40,7 +40,7 @@ const blogPosts: BlogPostType[] = [
 const BlogSection: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <div className="py-10 mx-auto text-center">
+    <div className="py-52 mx-auto text-center" id="ourOffice">
       {/* Title Section */}
       <h1 className="text-[2rem] font-semibold text-gray-800 dark:text-white">
         {t("title.blog")}

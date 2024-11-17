@@ -14,8 +14,8 @@ const Footer = () => {
             <Image
               src="/images/inditrans-logo.png"
               alt="Company Logo"
-              width={20}
-              height={20}
+              width={60}
+              height={60}
             />
           </div>
           <h1 className="text-xl text-center font-bold mt-2">

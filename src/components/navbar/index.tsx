@@ -5,7 +5,12 @@ import { useState } from "react";
 import { WhatsappIcon } from "../icon";
 import { useTranslation } from "react-i18next";
 import DropdownLanguage from "../dropdown/language";
-
+const scrollToSection = (id: string) => {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+};
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useTranslation();
@@ -78,21 +83,36 @@ const Navbar: React.FC = () => {
 
         {/* Navbar Links for Desktop */}
         <div className="hidden lg:flex lg:items-center lg:justify-center lg:space-x-8">
-          <Link href="#" className="text-gray-700 dark:text-gray-200">
+          <button
+            onClick={() => scrollToSection("home")}
+            className="text-gray-700 dark:text-gray-200"
+          >
             {t("navbar.home")}
-          </Link>
-          <Link href="#" className="text-gray-700 dark:text-gray-200">
+          </button>
+          <button
+            onClick={() => scrollToSection("aboutUs")}
+            className="text-gray-700 dark:text-gray-200"
+          >
             {t("navbar.aboutUs")}
-          </Link>
-          <Link href="#" className="text-gray-700 dark:text-gray-200">
+          </button>
+          <button
+            onClick={() => scrollToSection("ourOffice")}
+            className="text-gray-700 dark:text-gray-200"
+          >
             {t("navbar.ourOffice")}
-          </Link>
-          <Link href="#" className="text-gray-700 dark:text-gray-200">
+          </button>
+          <button
+            onClick={() => scrollToSection("tracking")}
+            className="text-gray-700 dark:text-gray-200"
+          >
             {t("navbar.tracking")}
-          </Link>
-          <Link href="#" className="text-gray-700 dark:text-gray-200">
+          </button>
+          <button
+            onClick={() => scrollToSection("services")}
+            className="text-gray-700 dark:text-gray-200"
+          >
             {t("navbar.services")}
-          </Link>
+          </button>
         </div>
 
         {/* Mobile Menu */}

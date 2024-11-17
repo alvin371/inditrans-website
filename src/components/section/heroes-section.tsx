@@ -91,7 +91,8 @@ const HeroesSection = () => {
   return (
     <>
       {/* Section Content */}
-      <div className="container py-10 mx-auto text-center">
+
+      <div className="container py-32 mx-auto text-center" id="home">
         <div className="flex flex-col mx-auto lg:w-[660px] w-full space-y-4">
           <Image
             width={100}
@@ -123,8 +124,8 @@ const HeroesSection = () => {
       </div>
 
       {/* Image Carousel Section */}
-      <div className="bg-[#D6E8CA]">
-        <div className="flex flex-col justify-center mt-10 py-20">
+      <section className="bg-[#D6E8CA] py-28" id="aboutUs">
+        <div className="flex flex-col justify-center mt-14 py-20">
           <h1 className="text-center text-[2rem] font-semibold">
             {t("title.heroes")}
           </h1>
@@ -146,7 +147,7 @@ const HeroesSection = () => {
             alt="Illustrative Image"
           />
         </div>
-      </div>
+      </section>
     </>
   );
 };

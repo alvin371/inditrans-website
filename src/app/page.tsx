@@ -19,7 +19,9 @@ export default function Home() {
       <BlogSection />
       <TeamSection />
       <TestimonialSection />
-      <Footer />
+      <section id="tracking">
+        <Footer />
+      </section>
 
       {/* Sticky "Hubungi Kami" Button */}
       <div className="fixed bottom-4 right-48 z-50">
