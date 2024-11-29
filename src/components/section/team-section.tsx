@@ -51,6 +51,7 @@ const TeamSection = () => {
               objectFit="cover"
               quality={100}
               priority={index < 3}
+              unoptimized
             />
           </div>
         ))}

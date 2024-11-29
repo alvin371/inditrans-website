@@ -16,6 +16,7 @@ const Footer = () => {
               alt="Company Logo"
               width={60}
               height={60}
+              unoptimized
             />
           </div>
           <h1 className="text-xl text-center font-bold mt-2">
