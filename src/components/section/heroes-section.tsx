@@ -1,18 +1,14 @@
-import { useRef } from "react";
 import {
   motion,
-  useScroll,
-  useSpring,
-  useTransform,
   useMotionValue,
-  useVelocity,
+  useTransform,
   useAnimationFrame
 } from "framer-motion";
 import Image from "next/image";
 import { wrap } from "@motionone/utils";
 import { useTranslation } from "react-i18next";
 
-function ParallaxImageRow({
+function MarqueeImageRow({
   images,
   baseVelocity
 }: {
@@ -20,35 +16,17 @@ function ParallaxImageRow({
   baseVelocity: number;
 }) {
   const baseX = useMotionValue(0);
-  const { scrollY } = useScroll();
-  const scrollVelocity = useVelocity(scrollY);
-  const smoothVelocity = useSpring(scrollVelocity, {
-    damping: 50,
-    stiffness: 400
-  });
-  const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
-    clamp: false
-  });
-  const directionFactor = useRef(1);
 
-  // Updated wrapping function to achieve a seamless loop effect
+  // Transform baseX to wrap the motion seamlessly
   const x = useTransform(baseX, (v) => `${wrap(-50, 50, v)}%`);
 
   useAnimationFrame((t, delta) => {
-    let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
-
-    if (velocityFactor.get() < 0) {
-      directionFactor.current = -1;
-    } else if (velocityFactor.get() > 0) {
-      directionFactor.current = 1;
-    }
-
-    moveBy += directionFactor.current * moveBy * velocityFactor.get();
-    baseX.set(baseX.get() + moveBy);
+    const moveBy = baseVelocity * (delta / 6000); // Move images by base velocity
+    baseX.set(baseX.get() + moveBy); // Update baseX value
   });
 
   return (
-    <div className="my-5 overflow-hidden ">
+    <div className="my-5 overflow-hidden">
       <motion.div className="flex flex-row space-x-5" style={{ x }}>
         {[...images, ...images].map((src, index) => (
           <Image
@@ -58,6 +36,7 @@ function ParallaxImageRow({
             className="object-cover w-full h-48 rounded-xl lg:w-full"
             src={src}
             alt={`Illustrative Image ${index + 1}`}
+            unoptimized
           />
         ))}
       </motion.div>
@@ -88,10 +67,10 @@ const HeroesSection = () => {
   ];
 
   const { t } = useTranslation();
+
   return (
     <>
       {/* Section Content */}
-
       <div className="container py-32 mx-auto text-center" id="home">
         <div className="flex flex-col mx-auto lg:w-[660px] w-full space-y-4">
           <Image
@@ -100,6 +79,7 @@ const HeroesSection = () => {
             src={"/images/inditrans-logo.png"}
             alt="Logo"
             className="justify-center mx-auto"
+            unoptimized
           />
           <h1 className="inline-block text-[#002C4A] text-3xl lg:text-[3rem] font-bold w-full text-center">
             PT. Inditrans Satu Nusantara
@@ -110,7 +90,7 @@ const HeroesSection = () => {
           </h1>
         </div>
 
-        {/* Image Section */}
+        {/* Video Section */}
         <div className="flex flex-row justify-center mt-10">
           <iframe
             src="https://drive.google.com/file/d/1A5ZE3nFWWZIon-ra8hh6Judd4fmrgTY5/preview?rel=0&amp"
@@ -132,11 +112,11 @@ const HeroesSection = () => {
           <h1 className="text-center text-xl">{t("title.heroes-sub")}</h1>
         </div>
 
-        {/* Move Left to Right */}
-        <ParallaxImageRow images={imageSrcs} baseVelocity={-5} />
+        {/* Marquee Effect: Left to Right */}
+        <MarqueeImageRow images={imageSrcs} baseVelocity={-50} />
 
-        {/* Move Right to Left */}
-        <ParallaxImageRow images={imageSrcs2} baseVelocity={5} />
+        {/* Marquee Effect: Right to Left */}
+        <MarqueeImageRow images={imageSrcs2} baseVelocity={50} />
 
         <div className="mt-10 pb-10">
           <Image
@@ -145,6 +125,7 @@ const HeroesSection = () => {
             className="object-cover w-full h-auto lg:w-full"
             src="/images/gallery-section/image-1.png"
             alt="Illustrative Image"
+            unoptimized
           />
         </div>
       </section>

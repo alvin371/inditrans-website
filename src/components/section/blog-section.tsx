@@ -66,6 +66,7 @@ const BlogSection: React.FC = () => {
                   layout="fill"
                   objectFit="cover"
                   className="rounded-xl"
+                  unoptimized
                 />
               </div>
               <div className="mt-6 lg:w-1/2 lg:mt-0 lg:mx-6 text-left">

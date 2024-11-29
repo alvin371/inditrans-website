@@ -29,6 +29,7 @@ const Navbar: React.FC = () => {
                 className="w-auto h-12 sm:h-14"
                 src="/images/inditrans-logo.png"
                 alt="Logo"
+                unoptimized
               />
               <Image
                 width={1920}
@@ -36,6 +37,7 @@ const Navbar: React.FC = () => {
                 className="w-auto h-12 sm:h-14"
                 src="/images/inditrans-title-logo.png"
                 alt="Logo"
+                unoptimized
               />
             </div>
           </Link>
@@ -89,7 +91,13 @@ const Navbar: React.FC = () => {
             (section) => (
               <button
                 key={section}
-                onClick={() => scrollToSection(section)}
+                onClick={() => {
+                  if (section === "tracking") {
+                    window.open("https://tracking.inditrans.co.id/", "_blank");
+                  } else {
+                    scrollToSection(section);
+                  }
+                }}
                 className="text-gray-700 dark:text-gray-200 group relative hover:font-semibold font-medium"
               >
                 {t(`navbar.${section}`)}
@@ -111,8 +119,15 @@ const Navbar: React.FC = () => {
                 <button
                   key={section}
                   onClick={() => {
-                    scrollToSection(section);
-                    setIsOpen(false); // Close menu after clicking
+                    if (section === "tracking") {
+                      window.open(
+                        "https://tracking.inditrans.co.id/",
+                        "_blank"
+                      );
+                    } else {
+                      scrollToSection(section);
+                      setIsOpen(false);
+                    }
                   }}
                   className="text-gray-200 hover:text-gray-400 hover:font-medium text-start"
                 >

@@ -19,7 +19,7 @@ export default function Home() {
       <BlogSection />
       <TeamSection />
       <TestimonialSection />
-      <section id="tracking">
+      <section id="services">
         <Footer />
       </section>
 
