@@ -91,13 +91,16 @@ const HeroesSection = () => {
         </div>
 
         {/* Video Section */}
-        <div className="flex flex-row justify-center mt-10">
+        <div className="flex flex-col mx-auto space-y-10 mt-10">
+          <h1 className="inline-block text-[#002C4A] text-3xl lg:text-[3rem] font-bold w-full text-center">
+            Pusing Mau Pindahan?
+          </h1>
           <iframe
             src="https://drive.google.com/file/d/1A5ZE3nFWWZIon-ra8hh6Judd4fmrgTY5/preview?rel=0&amp"
             width="1080"
             height="720"
             allow="autoplay; encrypted-media"
-            className="w-full max-w-screen-xl rounded-lg shadow-lg"
+            className="w-full max-w-screen-xl rounded-lg shadow-lg mx-auto"
             allowFullScreen
           ></iframe>
         </div>
@@ -118,11 +121,14 @@ const HeroesSection = () => {
         {/* Marquee Effect: Right to Left */}
         <MarqueeImageRow images={imageSrcs2} baseVelocity={50} />
 
-        <div className="mt-10 pb-10">
+        <div className="relative mt-10 pb-10">
+          <h1 className="absolute top-60 left-1/2 transform -translate-x-1/2 text-center text-[2rem] font-semibold text-[#002C4A] z-10">
+            Crew Professional & Energic
+          </h1>
           <Image
             width={1920}
             height={1080}
-            className="object-cover w-full h-auto lg:w-full"
+            className="object-cover w-full h-auto lg:w-full relative"
             src="/images/gallery-section/image-1.png"
             alt="Illustrative Image"
             unoptimized

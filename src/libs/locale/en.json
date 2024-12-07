@@ -9,28 +9,28 @@
   },
   "dropdown": {
     "language": "Language",
-    "indonesian": "Bahasa Indonesia",
+    "indonesian": "Indonesian",
     "english": "English"
   },
   "title": {
-    "heroes": "Superior Packing Process & Guaranteed Security",
-    "heroes-sub": "More than just logistics, we provide reliable and efficient delivery with advanced technological solutions.",
-    "blog": "Top Facilities for Seamless Services",
-    "blog-sub": "Supporting your needs with well-equipped infrastructure and high-quality service",
+    "heroes": "Let's Move",
+    "heroes-sub": "Superior packing quality and guaranteed safety, we make your move easy and stress-free",
+    "blog": "Best Facilities for Seamless Services",
+    "blog-sub": "Supporting your needs with reliable infrastructure and high-quality service",
     "article": {
       "title-1": "Advanced Technology",
       "title-2": "Spacious Warehouse",
-      "title-3": "Excellent Service",
-      "sub-1": "PT Inditrans utilizes common logistics technologies such as supply chain management systems, warehouse automation, and real-time tracking. These technologies enhance operational efficiency and delivery accuracy.",
-      "sub-2": "PT Inditrans has a large warehouse with ample capacity for storing various types of goods. This facility is supported by a modern management system to ensure efficient stock management. Its strategic location accelerates distribution.",
-      "sub-3": "Our highly dedicated team ensures quality service. PT Inditrans offers Fast Delivery & Moving services with guaranteed fast and secure shipping. Supported by a modern fleet and real-time tracking, the moving process becomes more efficient. This service ensures maximum customer satisfaction."
+      "title-3": "Best Service",
+      "sub-1": "PT Inditrans utilizes common logistics technologies such as supply chain management systems, warehouse automation, and real-time tracking. These technologies improve operational efficiency and delivery accuracy.",
+      "sub-2": "PT Inditrans has a spacious warehouse with large capacity for storing various types of goods. This facility is supported by modern management systems to ensure efficient stock management. Its strategic location accelerates distribution.",
+      "sub-3": "Our highly dedicated team ensures top-quality service. PT Inditrans offers Fast Delivery & Moving services with guarantees of fast and secure delivery. Supported by a modern fleet and real-time tracking system, the process of moving goods becomes more efficient. This service ensures maximum customer satisfaction."
     },
-    "team": "Professional Team for Optimal Performance",
-    "team-sub": "Working with expertise and high dedication to deliver the best service at every step",
+    "team": "Optimal Performance for Your Budget Efficiency",
+    "team-sub": "Working with high expertise and dedication to provide the best service at every step, resulting in your satisfaction being achieved at lower costs",
     "testimonial": "Customer Testimonials",
-    "testimonial-sub": "We take pride in the trust given by our customers. Here are some testimonials they provided",
+    "testimonial-sub": "We take pride in the trust our customers have placed in us. Here are some testimonials they have provided",
     "client": "Our Clients",
-    "cta": "Ready to Ship Your Package with Our New Service?",
-    "cta-sub": "Reach all across Indonesia with economical rates and priority delivery"
+    "cta": "START MOVING WITH OUR SERVICES?",
+    "cta-sub": "You are our priority, making your move easy and stress-free"
   }
 }
