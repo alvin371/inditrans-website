@@ -4,15 +4,15 @@ import Link from "next/link";
 import { WhatsappIcon } from "../icon";
 import { useTranslation } from "react-i18next";
 
-type TestimonialType = {
-  id: number;
-  name: string;
-  position: string;
-  company: string;
-  imageUrl: string;
-  feedback: string;
-  rating: number;
-};
+// type TestimonialType = {
+//   id: number;
+//   name: string;
+//   position: string;
+//   company: string;
+//   imageUrl: string;
+//   feedback: string;
+//   rating: number;
+// };
 
 type ClientLogoType = {
   id: number;
@@ -20,41 +20,41 @@ type ClientLogoType = {
   altText: string;
 };
 
-const testimonials: TestimonialType[] = [
-  {
-    id: 1,
-    name: "Customer Name",
-    position: "Position",
-    company: "Company Name",
-    imageUrl:
-      "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
-    feedback:
-      "A customer testimonial that highlights features and answers potential customer doubts about your product or service.",
-    rating: 5
-  },
-  {
-    id: 2,
-    name: "Customer Name",
-    position: "Position",
-    company: "Company Name",
-    imageUrl:
-      "https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
-    feedback:
-      "A customer testimonial that highlights features and answers potential customer doubts about your product or service. Showcase testimonials from a similar demographic to your customers.",
-    rating: 5
-  },
-  {
-    id: 3,
-    name: "Customer Name",
-    position: "Position",
-    company: "Company Name",
-    imageUrl:
-      "https://images.unsplash.com/photo-1547721064-da6cfb341d50?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
-    feedback:
-      "A customer testimonial that highlights features and answers potential customer doubts about your product or service. Showcase testimonials from a similar demographic to your customers.",
-    rating: 5
-  }
-];
+// const testimonials: TestimonialType[] = [
+//   {
+//     id: 1,
+//     name: "Customer Name",
+//     position: "Position",
+//     company: "Company Name",
+//     imageUrl:
+//       "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+//     feedback:
+//       "A customer testimonial that highlights features and answers potential customer doubts about your product or service.",
+//     rating: 5
+//   },
+//   {
+//     id: 2,
+//     name: "Customer Name",
+//     position: "Position",
+//     company: "Company Name",
+//     imageUrl:
+//       "https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+//     feedback:
+//       "A customer testimonial that highlights features and answers potential customer doubts about your product or service. Showcase testimonials from a similar demographic to your customers.",
+//     rating: 5
+//   },
+//   {
+//     id: 3,
+//     name: "Customer Name",
+//     position: "Position",
+//     company: "Company Name",
+//     imageUrl:
+//       "https://images.unsplash.com/photo-1547721064-da6cfb341d50?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+//     feedback:
+//       "A customer testimonial that highlights features and answers potential customer doubts about your product or service. Showcase testimonials from a similar demographic to your customers.",
+//     rating: 5
+//   }
+// ];
 
 const clientLogos: ClientLogoType[] = [
   { id: 1, imageUrl: "/images/softext-logo.png", altText: "Softext Indonesia" },
@@ -77,7 +77,7 @@ const clientLogos: ClientLogoType[] = [
 ];
 
 const TestimonialSection: React.FC = () => {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  // const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const { t } = useTranslation();
   return (
     <section className="w-full bg-[#0F1010]">
@@ -128,7 +128,7 @@ const TestimonialSection: React.FC = () => {
       <div
         className="w-full h-[600px] content-center"
         style={{
-          backgroundImage: `url('${baseUrl}/images/shipping-background.png')`
+          backgroundImage: `url('https://client.inditrans.co.id/images/shipping-background.png')`
         }}
       >
         <div className="text-center pt-10 ">
