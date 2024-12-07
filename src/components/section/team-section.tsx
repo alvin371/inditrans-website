@@ -21,7 +21,7 @@ const TeamSection = () => {
       alt: "Diskusi antar pekerja di gudang"
     },
     {
-      src: "/images/gallery-section/image-4.png",
+      src: "/images/gallery-section/image-4.jpg",
       alt: "Koordinasi tim di gudang"
     },
     {

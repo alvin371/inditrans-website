@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { FaStar } from "react-icons/fa";
 import Link from "next/link";
 import { WhatsappIcon } from "../icon";
 import { useTranslation } from "react-i18next";
@@ -91,42 +90,15 @@ const TestimonialSection: React.FC = () => {
             {t("title.testimonial-sub")}
           </p>
         </div>
-        <section className="grid grid-cols-1 gap-8 mt-8 xl:mt-16 lg:grid-cols-2 xl:grid-cols-3">
-          {testimonials.map((testimonial) => (
-            <div className="p-8 border rounded-lg" key={testimonial.id}>
-              <div className="flex mb-4">
-                {[...Array(5)].map((_, index) => (
-                  <FaStar key={index} className="text-yellow-500 text-xl" />
-                ))}
-              </div>
-
-              <p className="text-white leading-loose">
-                “A customer testimonial that highlights features and answers
-                potential customer doubts about your product or service.
-                Showcase testimonials from a similar demographic to your
-                customers.”
-              </p>
-
-              <div className="flex items-center mt-8 -mx-2">
-                <div className="relative mx-2 w-14 h-14 rounded-full ring-4 ring-gray-300 dark:ring-gray-700 overflow-hidden shrink-0">
-                  <Image
-                    src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
-                    alt="Robert"
-                    layout="fill"
-                    objectFit="cover"
-                    unoptimized // Menyesuaikan agar gambar pas dengan container
-                  />
-                </div>
-
-                <div className="mx-2">
-                  <h1 className="font-semibold text-white">Customer Name</h1>
-                  <span className="text-sm text-white">
-                    Position, Company Name
-                  </span>
-                </div>
-              </div>
-            </div>
-          ))}
+        <section className="grid grid-cols-1 gap-8 mt-8 xl:mt-16 lg:grid-cols-1 xl:grid-cols-1">
+          <iframe
+            src="https://drive.google.com/file/d/1K8hqXjm2PXGncsnJ5GJjSjwiMhNXl9jy/preview?rel=0&amp"
+            width="408"
+            height="720"
+            allow="autoplay; encrypted-media"
+            className="w-[408px] max-w-screen-xl rounded-lg shadow-lg mx-auto"
+            allowFullScreen
+          ></iframe>
         </section>
       </div>
       <div>
@@ -160,7 +132,7 @@ const TestimonialSection: React.FC = () => {
         }}
       >
         <div className="text-center pt-10 ">
-          <h1 className="font-bold text-white text-3xl sm:text-4xl lg:text-6xl">
+          <h1 className="font-bold text-white text-3xl sm:text-4xl lg:text-6xl justify-center w-1/2 mx-auto">
             {t("title.cta")}
           </h1>
           <p className="text-white text-sm sm:text-2xl mt-6">

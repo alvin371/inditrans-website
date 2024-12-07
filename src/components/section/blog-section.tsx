@@ -29,10 +29,10 @@ const blogPosts: BlogPostType[] = [
   },
   {
     id: 3,
-    title: "Pelayanan Terbaik",
+    title: "Fast Delivery & Moving",
     description:
-      "Tim kami yang berdedikasi tinggi memastikan pelayanan berkualitPT Inditrans menawarkan layanan Fast Delivery & Moving dengan jaminan pengiriman cepat dan aman. Didukung armada modern dan sistem pelacakan real-time, proses pemindahan barang jadi lebih efisien. Layanan ini memastikan kepuasan pelanggan maksimal.",
-    imageUrl: "/images/blog-section/image-2.png",
+      "PT Inditrans menawarkan layanan Fast Delivery & Moving dengan jaminan pengiriman cepat dan aman. Didukung armada modern dan sistem pelacakan real-time, proses pemindahan barang jadi lebih efisien. Layanan ini memastikan kepuasan pelanggan maksimal.     ",
+    imageUrl: "/images/blog-section/image-2.jpeg",
     altText: "Pelayanan Terbaik"
   }
 ];
