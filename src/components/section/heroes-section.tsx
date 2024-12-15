@@ -8,62 +8,58 @@ import Image from "next/image";
 import { wrap } from "@motionone/utils";
 import { useTranslation } from "react-i18next";
 
-function MarqueeImageRow({
+// Updated MarqueeImageRow function
+const MarqueeImageRow = ({
   images,
   baseVelocity
 }: {
   images: string[];
   baseVelocity: number;
-}) {
+}) => {
   const baseX = useMotionValue(0);
-
-  // Transform baseX to wrap the motion seamlessly
   const x = useTransform(baseX, (v) => `${wrap(-50, 50, v)}%`);
 
   useAnimationFrame((t, delta) => {
-    const moveBy = baseVelocity * (delta / 6000); // Move images by base velocity
-    baseX.set(baseX.get() + moveBy); // Update baseX value
+    const moveBy = baseVelocity * (delta / 8000);
+    baseX.set(baseX.get() + moveBy);
   });
 
   return (
-    <div className="my-5 overflow-hidden">
+    <div className="overflow-hidden">
       <motion.div className="flex flex-row space-x-5" style={{ x }}>
-        {[...images, ...images].map((src, index) => (
+        {images.concat(images).map((src, index) => (
           <Image
             key={index}
             width={1920}
             height={1080}
-            className="object-cover w-full h-48 rounded-xl lg:w-full"
+            className="object-cover w-full h-48 rounded-xl"
             src={src}
-            alt={`Illustrative Image ${index + 1}`}
+            alt={`Marquee Image ${index + 1}`}
             unoptimized
           />
         ))}
       </motion.div>
     </div>
   );
-}
+};
 
 const HeroesSection = () => {
   const imageSrcs = [
-    "/images/heroes-section/image.jpg",
-    "/images/heroes-section/image-1.jpg",
-    "/images/heroes-section/image-3.jpg",
-    "/images/heroes-section/image-4.jpg",
-    "/images/heroes-section/image-5.jpg",
-    "/images/heroes-section/image-6.jpg",
-    "/images/heroes-section/image-7.jpg",
-    "/images/heroes-section/image-8.jpg"
+    "/images/heroes-section/image-1.jpeg",
+    "/images/heroes-section/image-2.jpeg",
+    "/images/heroes-section/image-3.jpeg",
+    "/images/heroes-section/image-4.jpeg",
+    "/images/heroes-section/image-5.jpeg",
+    "/images/heroes-section/image-6.jpeg",
+    "/images/heroes-section/image-7.jpeg"
   ];
   const imageSrcs2 = [
-    "/images/heroes-section/image-9.jpg",
-    "/images/heroes-section/image-10.jpg",
-    "/images/heroes-section/image-11.jpg",
-    "/images/heroes-section/image-12.jpg",
-    "/images/heroes-section/image-13.jpg",
-    "/images/heroes-section/image-14.jpg",
-    "/images/heroes-section/image-15.jpg",
-    "/images/heroes-section/image-16.jpg"
+    "/images/heroes-section/image-8.jpeg",
+    "/images/heroes-section/image-9.jpeg",
+    "/images/heroes-section/image-10.jpeg",
+    "/images/heroes-section/image-11.jpeg",
+    "/images/heroes-section/image-12.jpeg",
+    "/images/heroes-section/image-13.jpeg"
   ];
 
   const { t } = useTranslation();
