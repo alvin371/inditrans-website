@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { WhatsappIcon } from "../icon";
 import { useTranslation } from "react-i18next";
 
@@ -139,13 +138,15 @@ const TestimonialSection: React.FC = () => {
             {t("title.cta-sub")}
           </p>
           <div className="flex justify-center ">
-            <Link
-              href="#"
+            <p
+              onClick={() => {
+                window.open("https://wa.me/6281214502716", "_blank");
+              }}
               className="flex flex-row px-5 py-2 mt-4 text-sm text-center text-white capitalize bg-[#EDAF05] rounded-full hover:bg-[#edb705d7] lg:w-40"
             >
               <WhatsappIcon className="w-5 h-5 mr-2" />
-              {t("navbar.contactUs")}
-            </Link>
+              {/* {t("navbar.contactUs")} */}
+            </p>
           </div>
         </div>
       </div>
