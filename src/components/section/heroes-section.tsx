@@ -46,24 +46,22 @@ function MarqueeImageRow({
 
 const HeroesSection = () => {
   const imageSrcs = [
-    "/images/heroes-section/image.jpg",
-    "/images/heroes-section/image-1.jpg",
-    "/images/heroes-section/image-3.jpg",
-    "/images/heroes-section/image-4.jpg",
-    "/images/heroes-section/image-5.jpg",
-    "/images/heroes-section/image-6.jpg",
-    "/images/heroes-section/image-7.jpg",
-    "/images/heroes-section/image-8.jpg"
+    "/images/heroes-section/1.jpeg",
+    "/images/heroes-section/2.jpeg",
+    "/images/heroes-section/3.jpeg",
+    "/images/heroes-section/4.jpeg",
+    "/images/heroes-section/5.jpeg",
+    "/images/heroes-section/6.jpeg",
+    "/images/heroes-section/7.jpeg"
   ];
   const imageSrcs2 = [
-    "/images/heroes-section/image-9.jpg",
-    "/images/heroes-section/image-10.jpg",
-    "/images/heroes-section/image-11.jpg",
-    "/images/heroes-section/image-12.jpg",
-    "/images/heroes-section/image-13.jpg",
-    "/images/heroes-section/image-14.jpg",
-    "/images/heroes-section/image-15.jpg",
-    "/images/heroes-section/image-16.jpg"
+    "/images/heroes-section/8.jpeg",
+    "/images/heroes-section/9.jpeg",
+    "/images/heroes-section/10.jpeg",
+    "/images/heroes-section/11.jpeg",
+    "/images/heroes-section/12.jpeg",
+    "/images/heroes-section/13.jpeg",
+    "/images/heroes-section/14.jpeg"
   ];
 
   const { t } = useTranslation();
@@ -71,24 +69,63 @@ const HeroesSection = () => {
   return (
     <>
       {/* Section Content */}
-      <div className="container py-32 mx-auto text-center" id="home">
-        <div className="flex flex-col mx-auto lg:w-[660px] w-full space-y-4">
+      <section className="relative h-screen overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
           <Image
-            width={100}
-            height={100}
-            src={"/images/inditrans-logo.png"}
-            alt="Logo"
-            className="justify-center mx-auto"
+            src="/images/background-heroes.jpg"
+            alt="Transportation Background"
+            layout="fill"
+            objectFit="cover"
+            className="z-0"
             unoptimized
           />
-          <h1 className="inline-block text-[#002C4A] text-3xl lg:text-[3rem] font-bold w-full text-center">
-            PT. Inditrans Satu Nusantara
-          </h1>
-
-          <h1 className="text-center text-xl lg:text-[2rem] font-semibold">
-            Packing & Moving
-          </h1>
         </div>
+
+        {/* Diagonal Overlay */}
+        <div
+          className="absolute inset-0 bg-[#D6E8CA] opacity-50"
+          style={{
+            clipPath: "polygon(60% 0, 100% 0, 100% 100%, 40% 100%)"
+          }}
+        />
+
+        <div className="relative h-full container mx-auto px-4 flex items-center">
+          {/* Left Content */}
+          <div className="w-full lg:w-1/2 text-white pr-4">
+            <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+              TRANSPORTATIONS & LOGISTICS SERVICES
+            </h1>
+            <p className="text-lg mb-8">
+              Providing the best transportation option for your business which
+              includes both inland and sea
+            </p>
+          </div>
+
+          {/* Right Content */}
+          <div className="hidden lg:block w-1/2 pl-20">
+            <div className="bg-white space-y-5 p-8 rounded-lg shadow-lg">
+              <Image
+                width={100}
+                height={100}
+                src={"/images/inditrans-logo.png"}
+                alt="Logo"
+                className="justify-center mx-auto"
+                unoptimized
+              />
+              <h1 className="inline-block text-[#002C4A] text-3xl lg:text-[3rem] font-bold w-full text-center">
+                PT. Inditrans Satu Nusantara
+              </h1>
+
+              <h1 className="text-center text-xl lg:text-[2rem] font-semibold">
+                Packing & Moving
+              </h1>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div className="container pb-24 mx-auto text-center" id="home">
+        <div className="flex flex-col mx-auto lg:w-[660px] w-full space-y-4"></div>
 
         {/* Video Section */}
         <div className="flex flex-col mx-auto space-y-10 mt-10">
@@ -122,7 +159,7 @@ const HeroesSection = () => {
         <MarqueeImageRow images={imageSrcs2} baseVelocity={50} />
 
         <div className="relative mt-10 pb-10">
-          <h1 className="absolute top-60 left-1/2 transform -translate-x-1/2 text-center text-[2rem] font-semibold text-[#002C4A] z-10">
+          <h1 className="absolute lg:top-60 md:top-10 left-1/2 transform -translate-x-1/2 text-center lg:text-[2rem] font-semibold text-[#002C4A] z-10">
             Crew Professional & Energic
           </h1>
           <Image
