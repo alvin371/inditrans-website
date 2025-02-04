@@ -141,13 +141,15 @@ const Navbar: React.FC = () => {
           {/* Get Started Button */}
           <div className="hidden lg:flex flex-row space-x-4">
             <DropdownLanguage />
-            <Link
-              href="#"
+            <p
+              onClick={() => {
+                window.open("https://wa.me/6281214502716", "_blank");
+              }}
               className="flex flex-row px-5 py-2 mt-4 text-sm text-center text-white capitalize bg-[#EDAF05] rounded-full hover:bg-[#edb705d7] lg:mt-0 lg:ml-auto lg:w-auto"
             >
               <WhatsappIcon className="w-5 h-5 mr-2" />
-              {t("navbar.contactUs")}
-            </Link>
+              {/* {t("navbar.contactUs")} */}
+            </p>
           </div>
         </div>
       </nav>
