@@ -9,12 +9,12 @@ export const RouteURL = {
     mobiledev: "/services/mobile",
     transformation: "/services/transformation",
     blockchain: "/services/blockchain",
-    uiux: "/services/design",
+    uiux: "/services/design"
   },
   about: {
     root: "/about",
     leadership: "/about/leadership",
-    detailLeadership: "/about/leadership/detail",
+    detailLeadership: "/about/leadership/detail"
   },
   solutions: {
     root: "/solutions",
@@ -24,7 +24,7 @@ export const RouteURL = {
     financeManagement: "/solutions/finance-management",
     wasteManagement: "/solutions/waste-management",
     NFTMarketplace: "/solutions/nft-marketplace",
-    ecommerceApp: "/solutions/ecommerce-app",
+    ecommerceApp: "/solutions/ecommerce-app"
   },
   industries: {
     root: "/industries",
@@ -36,14 +36,15 @@ export const RouteURL = {
     healthcare: "/industries/healthcare",
     travelAndHospitality: "/industries/travel-and-hospitality",
     retail: "/industries/retail",
-    others: "/industries/others",
-  },
+    others: "/industries/others"
+  }
 };
 
 export const RouteURLExternal = {
   nortisacademy: "https://nortisacademy.id/",
   blog: "https://blog.dot.co.id",
-  whatsapp: "http://wa.me/6285795677652",
+  whatsapp:
+    "http://wa.me/6285795677652&text=Hi, We have plan to move and need some advise.",
   mail: "mailto:dearpartner@dot.co.id",
   linkedin: "https://www.linkedin.com/company/dot-indonesia",
   instagram: "https://www.instagram.com/dot.indonesia/",
@@ -52,5 +53,5 @@ export const RouteURLExternal = {
   facebook: "https://www.facebook.com/dotindonesia/",
   careers: "https://career.dot.co.id",
   engineering: "https://engineering.dot.co.id/",
-  partner: "https://partner.dot.co.id/",
+  partner: "https://partner.dot.co.id/"
 };

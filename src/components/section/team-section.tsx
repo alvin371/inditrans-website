@@ -47,10 +47,10 @@ const TeamSection = () => {
   return (
     <div className="bg-[#F6FAF3] py-10">
       <div className="flex flex-col justify-center mt-10 py-20">
-        <h1 className="text-center text-[2rem] font-semibold">
+        <h1 className="text-center text-[2rem] font-semibold dark:text-white">
           {t("title.team")}
         </h1>
-        <h1 className="text-center text-xl w-3/5 mx-auto">
+        <h1 className="text-center text-xl w-3/5 mx-auto dark:text-white">
           {t("title.team-sub")}
         </h1>
       </div>

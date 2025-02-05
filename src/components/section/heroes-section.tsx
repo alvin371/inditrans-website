@@ -111,7 +111,7 @@ const HeroesSection = () => {
                 className="justify-center mx-auto"
                 unoptimized
               />
-              <h1 className="inline-block text-[#002C4A] text-3xl lg:text-[3rem] font-bold w-full text-center">
+              <h1 className="inline-block text-[#002C4A] text-3xl lg:text-[2rem] font-bold w-full text-center">
                 PT. Inditrans Satu Nusantara
               </h1>
 
@@ -144,10 +144,12 @@ const HeroesSection = () => {
       {/* Image Carousel Section */}
       <section className="bg-[#D6E8CA] py-28" id="aboutUs">
         <div className="flex flex-col justify-center mt-14 py-20">
-          <h1 className="text-center text-[2rem] font-semibold">
+          <h1 className="text-center text-[2rem] font-semibold dark:text-white">
             {t("title.heroes")}
           </h1>
-          <h1 className="text-center text-xl">{t("title.heroes-sub")}</h1>
+          <h1 className="text-center text-xl dark:text-white">
+            {t("title.heroes-sub")}
+          </h1>
         </div>
 
         {/* Marquee Effect: Left to Right */}
