@@ -21,20 +21,12 @@ const Navbar: React.FC = () => {
       <nav className="container p-6 mx-auto lg:flex lg:justify-between lg:items-center">
         <div className="flex items-center justify-between">
           <Link href="#">
-            <div className="flex flex-row">
+            <div className="flex flex-row ml-10">
               <Image
                 width={1920}
                 height={1080}
-                className="w-auto h-12 sm:h-14"
-                src="/images/inditrans-logo.png"
-                alt="Logo"
-                unoptimized
-              />
-              <Image
-                width={1920}
-                height={1080}
-                className="w-auto h-12 sm:h-14"
-                src="/images/inditrans-title-logo.png"
+                className="w-auto h-16 sm:h-24"
+                src={"/images/Inditrans logo.png"}
                 alt="Logo"
                 unoptimized
               />

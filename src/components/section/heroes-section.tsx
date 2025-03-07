@@ -92,33 +92,20 @@ const HeroesSection = () => {
           {/* Left Content */}
           <div className="w-full lg:w-1/2 text-white pr-4">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-              TRANSPORTATIONS & LOGISTICS SERVICES
+              Professional Packing & Moving
             </h1>
-            <p className="text-lg mb-8">
-              Providing the best transportation option for your business which
-              includes both inland and sea
-            </p>
           </div>
 
           {/* Right Content */}
           <div className="hidden lg:block w-1/2 pl-20">
-            <div className="bg-white space-y-5 p-8 rounded-lg shadow-lg">
-              <Image
-                width={100}
-                height={100}
-                src={"/images/inditrans-logo.png"}
-                alt="Logo"
-                className="justify-center mx-auto"
-                unoptimized
-              />
-              <h1 className="inline-block text-[#002C4A] text-3xl lg:text-[2rem] font-bold w-full text-center">
-                PT. Inditrans Satu Nusantara
-              </h1>
-
-              <h1 className="text-center text-xl lg:text-[2rem] font-semibold">
-                Packing & Moving
-              </h1>
-            </div>
+            <Image
+              width={1000}
+              height={1000}
+              src={"/images/Inditrans logo.png"}
+              alt="Logo"
+              className="justify-center mx-auto"
+              unoptimized
+            />
           </div>
         </div>
       </section>
